@@ -1,5 +1,12 @@
-- 👋 Hi, I’m Chizubaga
-- 🌱 I’m currently learning Python
+- 👋 Hi, I’m Chizubaga aka Daksh
+- 🌱 I am fluent with the following programming/Markup languages:
+     Python
+     C++
+     GoLang
+     HTML
+     JavaScript
+     CSS
+     
 - 📫 How to reach me: Just text over
 
 <!---
