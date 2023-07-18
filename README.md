@@ -3,7 +3,7 @@
      Python, 
      C++, 
      Golang, 
-     Html, 
+     HTML, 
      Javascript, 
      CSS
      
