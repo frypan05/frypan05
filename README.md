@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Chizubaga aka Daksh
-- 🌱 I am fluent with the following programming/Markup languages:
+- 🌱 I am fluent with the following Programming/Markup languages:
      Python, 
      C++, 
      Golang, 
