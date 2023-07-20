@@ -5,6 +5,7 @@
      Golang, 
      HTML, 
      Javascript, 
+     MYSQL, 
      CSS
      
 - 📫 How to reach me: Just text over
