@@ -3,7 +3,6 @@
      Python,
      Java 
      C++, 
-     Golang, 
      HTML, 
      Javascript, 
      MYSQL, 
