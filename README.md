@@ -9,6 +9,8 @@
      CSS
      
 - 📫 How to reach me: Just text over
+- [![My GitHub Stats](https://github-readme-stats.vercel.app/api/?username=Chizubaga&count_private=true&theme=tokyonight&showicons=true)]()
+[![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Chizubaga&langs_count=5&theme=tokyonight)]()
 
 <!---
 Chizubaga/Chizubaga is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
