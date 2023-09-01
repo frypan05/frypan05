@@ -13,7 +13,7 @@
 [![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Chizubaga&langs_count=5&theme=tokyonight)]()
 ![image title](https://rushter.com/counter.svg)
 ![Visitor Count](https://profile-counter.glitch.me/Chizubaga/count.svg)
-
+![](https://komarev.com/ghpvc/?username=Chizubaga&style=flat-square)
 
 <!---
 Chizubaga/Chizubaga is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
