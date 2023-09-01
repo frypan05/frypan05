@@ -10,8 +10,8 @@
      
 - 📫 How to reach me: Just text over
 - [![My GitHub Stats](https://github-readme-stats.vercel.app/api/?username=Chizubaga&count_private=true&theme=tokyonight&showicons=true)]()
-[![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Chizubaga&langs_count=5&theme=tokyonight)]()
-![image title](https://rushter.com/counter.svg)
+- [![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Chizubaga&langs_count=5&theme=tokyonight)]()
+- ![image title](https://rushter.com/counter.svg)
 
 - ![Visitor Count](https://profile-counter.glitch.me/Chizubaga/count.svg)
 
