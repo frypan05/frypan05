@@ -14,6 +14,7 @@
 ![image title](https://rushter.com/counter.svg)
 
 - ![Visitor Count](https://profile-counter.glitch.me/Chizubaga/count.svg)
+- <img src="https://komarev.com/ghpvc/?username=Chizubaga&style=flat-square&color=blue" alt=""/>
 
 
 <!---
