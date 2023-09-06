@@ -1,4 +1,5 @@
 -1 👋 Hi, I’m chizubaga aka Daksh
+![](https://github.com/README.md/[Your_GIF_Name.gif](https://cdn.dribbble.com/users/1292677/screenshots/6139167/avento.gif))
 - 🌱 I am fluent with the following Programming/Markup languages:
      Advanced Python,
      Java, 
