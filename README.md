@@ -1,7 +1,7 @@
-- 👋 Hi, I’m chizubaga aka Daksh
+-1 👋 Hi, I’m chizubaga aka Daksh
 - 🌱 I am fluent with the following Programming/Markup languages:
      Python,
-     Java 
+     Java, 
      C++, 
      HTML, 
      Javascript, 
