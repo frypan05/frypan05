@@ -1,6 +1,6 @@
 -1 👋 Hi, I’m chizubaga aka Daksh
 - 🌱 I am fluent with the following Programming/Markup languages:
-     Advance Python,
+     Advanced Python,
      Java, 
      C++, 
      HTML, 
