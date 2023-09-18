@@ -18,16 +18,7 @@
 
 - [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Chizubaga&theme=dark&background=000000)](https://git.io/streak-stats)
 
-- https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
-- https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
-- https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white
-- https://img.shields.io/badge/SciPy-654FF0?style=for-the-badge&logo=SciPy&logoColor=white
-- https://img.shields.io/badge/HackTheBox-111927?style=for-the-badge&logo=Hack%20The%20Box&logoColor=9FEF00
-- https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue
-- https://img.shields.io/badge/OpenJDK-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white
-- https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white
-- https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white
-- 
+
 
 
 
