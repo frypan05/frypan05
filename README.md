@@ -10,6 +10,7 @@
      CSS
      
 - 📫 How to reach me: Just text over
+- -[![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Chizubaga&theme=react-dark)](https://github.com/Chizubaga/github-readme-activity-graph)
 - [![My GitHub Stats](https://github-readme-stats.vercel.app/api/?username=Chizubaga&count_private=true&theme=tokyonight&showicons=true)]()
 - [![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Chizubaga&langs_count=5&theme=tokyonight)]()
 - ![image title](https://rushter.com/counter.svg)
@@ -18,7 +19,7 @@
 
 - [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Chizubaga&theme=dark&background=000000)](https://git.io/streak-stats)
 
--[![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Chizubaga&theme=react-dark)](https://github.com/Chizubaga/github-readme-activity-graph)
+
 
 
 <!---
