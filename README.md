@@ -18,7 +18,7 @@
 
 - [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Chizubaga&theme=dark&background=000000)](https://git.io/streak-stats)
 
--[![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Chizubaga)](https://github.com/Chizubaga/github-readme-activity-graph)
+-[![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Chizubaga&theme=react-dark)](https://github.com/Chizubaga/github-readme-activity-graph)
 
 
 <!---
