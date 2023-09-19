@@ -1,5 +1,7 @@
 - 👋 Hi, I’m chizubaga aka Daksh
-![](https://github.com/README.md/https://www.bing.com/images/search?view=detailV2&ccid=hQR3%2ftCL&id=DF10FB0CB9404A9D2AAE3F3FA078CD4A215A5FF6&thid=OIP.hQR3_tCL_phZgIK80wnOcAHaFj&mediaurl=https%3a%2f%2fcdn.dribbble.com%2fusers%2f1292677%2fscreenshots%2f6139167%2favento.gif&exph=600&expw=800&q=coding+gif+joma+tech&simid=607996541665943381&FORM=IRPRST&ck=299AB07792DA18729A13F6614CEECB67&selectedIndex=60)
+<div id="header" align="center">
+  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
+</div>
 - 🌱 I am fluent with the following Programming/Markup languages:
      Advanced Python,
      Java, 
