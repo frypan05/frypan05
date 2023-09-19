@@ -16,9 +16,7 @@
 - [![My GitHub Stats](https://github-readme-stats.vercel.app/api/?username=Chizubaga&count_private=true&theme=tokyonight&showicons=true)]()                       [![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Chizubaga&langs_count=5&theme=tokyonight)]()
 
 
-- ![Visitor Count](https://profile-counter.glitch.me/Chizubaga/count.svg)
-
-- [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Chizubaga&theme=dark&background=000000)](https://git.io/streak-stats)
+- ![Visitor Count](https://profile-counter.glitch.me/Chizubaga/count.svg)             [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Chizubaga&theme=dark&background=000000)](https://git.io/streak-stats)
 - [![Badge](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)]()
 - [![Badge](https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white)]()
 - [![Badge](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)]()
