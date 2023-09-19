@@ -18,7 +18,7 @@
 - ![image title](https://rushter.com/counter.svg)
 
 - ![Visitor Count](https://profile-counter.glitch.me/Chizubaga/count.svg)
-- (https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+- [![Badge](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)]()
 
 - [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=Chizubaga&theme=dark&background=000000)](https://git.io/streak-stats)
 
