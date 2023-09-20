@@ -5,7 +5,6 @@
 - 🌱 I am fluent with the following Programming/Markup languages:
      Advanced Python,
      Java, 
-     C++, 
      HTML, 
      Javascript, 
      MYSQL, 
