@@ -10,7 +10,7 @@
      MYSQL, 
      CSS
      
-- 📫 How to reach me: Just text over
+- 📫 How to reach me: Star any repository you find helpful, and you'll recieve a text from me as fast as the Flash.
 - [![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Chizubaga&theme=react-dark)](https://github.com/Chizubaga/github-readme-activity-graph)
 - [![My GitHub Stats](https://github-readme-stats.vercel.app/api/?username=Chizubaga&count_private=true&theme=tokyonight&showicons=true)]()                       [![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Chizubaga&langs_count=5&theme=tokyonight)]()
 
