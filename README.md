@@ -3,12 +3,12 @@
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
 </div>
 - 🌱 I am fluent with the following Programming/Markup languages:
-     - Advanced Python,
-     - Java, 
-     - HTML, 
-     - Javascript, 
-     - MYSQL, 
-     CSS
+    Advanced Python,
+    Java, 
+    HTML, 
+    Javascript, 
+    MYSQL, 
+    CSS
      
 - 📫 How to reach me: Star any repository you find helpful, and you'll recieve a text from me as fast as the Flash.
 - [![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Chizubaga&theme=react-dark)](https://github.com/Chizubaga/github-readme-activity-graph)
