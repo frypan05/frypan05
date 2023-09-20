@@ -3,11 +3,11 @@
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
 </div>
 - 🌱 I am fluent with the following Programming/Markup languages:
-     Advanced Python,
-     Java, 
-     HTML, 
-     Javascript, 
-     MYSQL, 
+     - Advanced Python,
+     - Java, 
+     - HTML, 
+     - Javascript, 
+     - MYSQL, 
      CSS
      
 - 📫 How to reach me: Star any repository you find helpful, and you'll recieve a text from me as fast as the Flash.
