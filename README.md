@@ -4,6 +4,9 @@
 </div>
 - 🌱 I am fluent with the following Programming/Markup languages:
     Advanced Python,
+    C,
+    Dart(Flutter),
+    Rust,
     Java, 
     Node.js,
     Express.js,
