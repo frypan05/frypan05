@@ -14,6 +14,7 @@
     Javascript, 
     MYSQL, 
     CSS
+
 - 🥕 
     Windows,
     WSL,
