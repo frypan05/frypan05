@@ -14,6 +14,12 @@
     Javascript, 
     MYSQL, 
     CSS
+-🥕 
+    Windows,
+    WSL,
+    Kali Linux,
+    Ubuntu
+    
      
 - 📫 How to reach me: Star any repository you find helpful, and you'll recieve a text from me as fast as the Flash.
 - [![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=frypan05&theme=react-dark)](https://github.com/frypan05/github-readme-activity-graph)
