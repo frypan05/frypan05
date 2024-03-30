@@ -14,7 +14,7 @@
     Javascript, 
     MYSQL, 
     CSS
--🥕 
+- 🥕 
     Windows,
     WSL,
     Kali Linux,
