@@ -12,6 +12,8 @@
     Java, 
     Node.js,
     Express.js,
+    Git,
+    
     HTML, 
     Javascript, 
     MYSQL, 
@@ -22,6 +24,16 @@
     WSL,
     Kali Linux,
     Ubuntu
+
+### Others:
+<p float="left">
+  <img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
+  <img alt="NPM" src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" />
+  <img alt="StyledC" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
+  <img alt="Firebase" src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black"/>
+  <img alt="Heroku" src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />
+  <img alt="VSCode" src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" />
+</p>
     
      
 - 📫 How to reach me: Star any repository you find helpful, and you'll recieve a text from me as fast as the Flash.
