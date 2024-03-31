@@ -17,7 +17,7 @@
     MYSQL, 
     CSS
 
-- 🥕 
+### 🥕 Operating Systems: 
     Windows,
     WSL,
     Kali Linux,
