@@ -3,7 +3,7 @@
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
 </div>
 
-- 🌱 I am fluent with the following Programming/Markup languages:
+### 🌱 Languages & Tools:
     Advanced Python,
     Solidity,
     C,
