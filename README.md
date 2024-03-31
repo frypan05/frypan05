@@ -24,6 +24,13 @@
     WSL,
     Kali Linux,
     Ubuntu
+    
+     
+- 📫 How to reach me: Star any repository you find helpful, and you'll recieve a text from me as fast as the Flash.
+- [![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=frypan05&theme=react-dark)](https://github.com/frypan05/github-readme-activity-graph)
+
+- ![Daksh's GitHub stats](https://github-readme-stats.vercel.app/api?username=frypan05&show_icons=true&theme=radical)                     [![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=frypan05&langs_count=10&theme=tokyonight)]()
+
 
 ### Others:
 <p float="left">
@@ -34,12 +41,6 @@
   <img alt="Heroku" src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />
   <img alt="VSCode" src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" />
 </p>
-    
-     
-- 📫 How to reach me: Star any repository you find helpful, and you'll recieve a text from me as fast as the Flash.
-- [![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=frypan05&theme=react-dark)](https://github.com/frypan05/github-readme-activity-graph)
-
-- ![Daksh's GitHub stats](https://github-readme-stats.vercel.app/api?username=frypan05&show_icons=true&theme=radical)                     [![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=frypan05&langs_count=10&theme=tokyonight)]()
 
 - [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=frypan05&theme=dark&background=000000)](https://git.io/streak-stats)
 - ![Visitor Count](https://profile-counter.glitch.me/frypan05/count.svg)
