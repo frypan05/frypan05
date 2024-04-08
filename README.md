@@ -13,7 +13,10 @@
     Node.js,
     Express.js,
     Git,
-    
+    Hardhat,
+    Next.js,
+    React.js,
+    Web3,
     HTML, 
     Javascript, 
     MYSQL, 
