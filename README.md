@@ -9,7 +9,8 @@
     C,
     Dart(Flutter),
     Rust,
-    Java, 
+    Java,
+    Django
     Node.js,
     Express.js,
     Git,
