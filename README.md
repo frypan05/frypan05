@@ -14,6 +14,7 @@
     Express.js,
     Git,
     Hardhat,
+    Ethers.js
     Next.js,
     React.js,
     Web3,
