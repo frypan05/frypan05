@@ -22,7 +22,7 @@
     HTML, 
     Javascript, 
     MYSQL, 
-    CSS
+    CSS.
 
 ### 🥕 Operating Systems: 
     Windows,
