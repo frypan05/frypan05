@@ -10,7 +10,7 @@
     Dart(Flutter),
     Rust,
     Java,
-    Django
+    Django,
     Node.js,
     Express.js,
     Git,
