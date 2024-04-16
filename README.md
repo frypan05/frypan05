@@ -6,7 +6,7 @@
 ### 🌱 Languages & Tools:
     Advanced Python,
     Solidity,
-    ,
+    C,
     Dart(Flutter),
     Rust,
     Java,
