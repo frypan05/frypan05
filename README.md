@@ -11,6 +11,7 @@
     Rust,
     Java,
     Django,
+    Web3,    
     Node.js,
     Express.js,
     Git,
@@ -18,7 +19,6 @@
     Ethers.js
     Next.js,
     React.js,
-    Web3,
     HTML, 
     Javascript, 
     MYSQL, 
