@@ -7,7 +7,6 @@
     Advanced Python,
     Solidity,
     C,
-    Dart(Flutter),
     Rust,
     Java,
     Django,
@@ -19,6 +18,7 @@
     Ethers.js
     Next.js,
     React.js,
+    Dart(Flutter),
     HTML, 
     Javascript, 
     MYSQL, 
