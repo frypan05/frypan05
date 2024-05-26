@@ -5,6 +5,7 @@
 
 ### 🌱 Languages & Tools:
     Advanced Python,
+    PostgreSQL
     Solidity,
     C,
     Rust,
