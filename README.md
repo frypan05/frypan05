@@ -39,7 +39,7 @@
 -  ![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=frypan05&langs_count=10&theme=tokyonight)]()
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=frypan05&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="300" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=frypan05&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="250" alt="stats graph"  />
 </div>
 
 - [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=frypan05&theme=dark&background=000000)](https://git.io/streak-stats)
