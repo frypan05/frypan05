@@ -4,6 +4,7 @@
 </div>
 
 ### 🌱 Languages & Tools:
+    C++,
     Advanced Python,
     PostgreSQL,
     Solidity,
