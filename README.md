@@ -1,4 +1,5 @@
-- 👋 Hi! I’m Daksh :)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=FF3670&size=35&center=true&vCenter=true&width=1000&lines=Welcome+to+my+GitHub+profile!;My+name+is+Daksh+Sharma;I'm+Software+Engineering+Student)](https://git.io/typing-svg)
+
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
 </div>
@@ -53,7 +54,7 @@
 - 🌐 Visit my Website for more about me : [Portfolio](https://frypan.vercel.app/)
 <br>
 
-[![An image of @ujjawal179's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/frypan05)](https://holopin.io/@frypan05)
+[![An image of @frypan05's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/frypan05)](https://holopin.io/@frypan05)
 
 
 ---
