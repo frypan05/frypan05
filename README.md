@@ -54,8 +54,6 @@
 - 🌐 Visit my Website for more about me : [Portfolio](https://frypan.vercel.app/)
 <br>
 
-[![An image of @frypan05's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/frypan05)](https://holopin.io/@frypan05)
-
 
 ---
 
