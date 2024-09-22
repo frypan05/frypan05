@@ -54,6 +54,7 @@
 - 🌐 Visit my Website for more about me : [Portfolio](https://frypan.vercel.app/)
 <br>
 
+- I am a Developer at day, and an Astrophile at night.
 
 ---
 
