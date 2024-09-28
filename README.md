@@ -2,7 +2,6 @@
 
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
-  <img src="https://media4.giphy.com/media/DUtVdGeIU8lmo/giphy.gif" width="200"/>
 </div>
 
 ### 🌱 Languages & Tools:
@@ -47,7 +46,7 @@
   <img src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=frypan05&theme=radical"> 
   <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=frypan05&theme=radical"> 
 </div>
-
+<img src="https://media4.giphy.com/media/DUtVdGeIU8lmo/giphy.gif" width="200"/>
 ---
 
 <img src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" min-width="400px" max-width="400px" width="400px" align="right" alt="Computador iuriCode">
