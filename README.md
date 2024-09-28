@@ -46,7 +46,6 @@
   <img src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=frypan05&theme=radical"> 
   <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=frypan05&theme=radical"> 
 </div>
-<img src="https://media4.giphy.com/media/DUtVdGeIU8lmo/giphy.gif" width="200"/>
 ---
 
 <img src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" min-width="400px" max-width="400px" width="400px" align="right" alt="Computador iuriCode">
@@ -55,7 +54,7 @@
 <br>
 
 - I am a Developer at day, and an Astrophile at night.
-
+<img src="https://media4.giphy.com/media/DUtVdGeIU8lmo/giphy.gif" width="400"/>
 ---
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/frypan05/frypan05/output/github-contribution-grid-snake-dark.svg">
