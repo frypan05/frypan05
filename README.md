@@ -54,7 +54,6 @@
 <br>
 
 - I am a Developer at day, and an Astrophile at night.
-<img src="https://media4.giphy.com/media/DUtVdGeIU8lmo/giphy.gif" width="400"/>
 ---
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/frypan05/frypan05/output/github-contribution-grid-snake-dark.svg">
@@ -63,7 +62,7 @@
 </picture>
 
 <br>
-
+<img src="https://media4.giphy.com/media/DUtVdGeIU8lmo/giphy.gif" width="400"/>
 <div>
 <a href = "mailto: daksharma5804@gmail.com"><img loading="lazy" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/in/dakshsharma05/" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
