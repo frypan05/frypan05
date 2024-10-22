@@ -60,6 +60,7 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/frypan05/frypan05/output/github-contribution-grid-snake.svg">
   <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/frypan05/frypan05/output/github-contribution-grid-snake.svg">
 </picture>
+![snake animation](https://github.com/<seu frypan05 >/<seu frypan05>/blob/output/github-contribution-grid-snake2.svg)
 
 <br>
 <img src="https://media4.giphy.com/media/DUtVdGeIU8lmo/giphy.gif" width="400"/>
