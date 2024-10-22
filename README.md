@@ -82,9 +82,6 @@
 </div>
 <br>
 
-![snake animation](https://github.com/frypan05/frypan05/blob/output/github-contribution-grid-snake2.svg)
-
-
 
 <!---
 Chizubaga/Chizubaga is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
