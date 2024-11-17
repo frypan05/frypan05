@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=2BF5EB&size=35&center=true&vCenter=true&width=1000&lines=Welcome+to+my+GitHub+profile!;My+name+is+Daksh+Sharma;I'm+a+Software+Engineering+Student&font=Eras%20ITC)](https://git.io/typing-svg)
+## Hi, I'm Daksh Sharma
 
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
