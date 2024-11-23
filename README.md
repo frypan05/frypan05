@@ -30,6 +30,7 @@
 
 ### 🥕 Operating Systems: 
     Windows,
+    MacOS,
     WSL,
     Kali Linux,
     Ubuntu
