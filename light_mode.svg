@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960" height="400" viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 28px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill: #111827; }
+      .sub { font: 400 14px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill: #374151; }
+      .stat { font: 400 16px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill: #111827; }
+      .value { font: 700 16px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill: #111827; text-anchor: end; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="400" rx="12"/>
+
+  <!-- Header -->
+  <text class="title" x="40" y="58">Daksh Sharma</text>
+  <text class="sub" x="40" y="82">Developer by day • Astrophile by night</text>
+
+  <!-- Stats block (labels + dynamic dots + right-aligned values) -->
+  <!-- Commits -->
+  <text class="stat" x="40"  y="140">Commits</text>
+  <text class="stat" x="160" y="140" id="commit_data_dots"> ................................ </text>
+  <text class="value" x="900" y="140" id="commit_data">0</text>
+
+  <!-- Stars -->
+  <text class="stat" x="40"  y="172">Stars</text>
+  <text class="stat" x="160" y="172" id="star_data_dots"> .................................... </text>
+  <text class="value" x="900" y="172" id="star_data">0</text>
+
+  <!-- Repositories (owned) -->
+  <text class="stat" x="40"  y="204">Repositories (owned)</text>
+  <text class="stat" x="260" y="204" id="repo_data_dots"> ......................... </text>
+  <text class="value" x="900" y="204" id="repo_data">0</text>
+
+  <!-- Repositories (contributed) -->
+  <text class="stat" x="40"  y="236">Repositories (contributed)</text>
+  <text class="stat" x="320" y="236" id="contrib_data_dots"> ............... </text>
+  <text class="value" x="900" y="236" id="contrib_data">0</text>
+
+  <!-- Followers -->
+  <text class="stat" x="40"  y="268">Followers</text>
+  <text class="stat" x="160" y="268" id="follower_data_dots"> ................................. </text>
+  <text class="value" x="900" y="268" id="follower_data">0</text>
+
+  <!-- Lines of Code -->
+  <text class="stat" x="40"  y="312">Lines of code (you) — total</text>
+  <text class="stat" x="340" y="312" id="loc_data_dots"> .................. </text>
+  <text class="value" x="900" y="312" id="loc_data">0</text>
+
+  <text class="stat" x="40"  y="344">└─ additions</text>
+  <text class="stat" x="180" y="344" id="loc_add_dots"> .............................. </text>
+  <text class="value" x="900" y="344" id="loc_add">0</text>
+
+  <text class="stat" x="40"  y="376">└─ deletions</text>
+  <text class="stat" x="180" y="376" id="loc_del_dots"> .............................. </text>
+  <text class="value" x="900" y="376" id="loc_del">0</text>
+</svg>
