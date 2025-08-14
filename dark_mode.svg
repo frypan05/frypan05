@@ -11,7 +11,7 @@
   </defs>
 
   <rect class="bg" x="0" y="0" width="960" height="400" rx="12"/>
-
+ 
   <!-- Header -->
   <text class="title" x="40" y="58">Daksh Sharma</text>
   <text class="sub" x="40" y="82">Developer by day • Astrophile by night</text>
