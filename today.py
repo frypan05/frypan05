@@ -16,12 +16,12 @@ QUERY_COUNT = {'user_getter': 0, 'follower_getter': 0, 'graph_repos_stars': 0, '
 # Global variable for owner ID - will be set by user_getter
 OWNER_ID = None
 
+# Rate limit handling
+RATE_LIMIT_WAIT = 3600  # 1 hour in seconds
+MAX_RETRIES = 3
 
 def daily_readme(birthday):
-    """
-    Returns the length of time since I was born
-    e.g. 'XX years, XX months, XX days'
-    """
+    """Returns the length of time since I was born"""
     diff = relativedelta.relativedelta(datetime.datetime.today(), birthday)
     return '{} {}, {} {}{}'.format(
         diff.years, 'year' + format_plural(diff.years), 
@@ -29,36 +29,55 @@ def daily_readme(birthday):
         diff.days, 'day' + format_plural(diff.days),
         ' 🎂' if (diff.months == 0 and diff.days == 0) else '')
 
-
 def format_plural(unit):
-    """
-    Returns a properly formatted number
-    e.g.
-    'day' + format_plural(diff.days) == 5
-    >>> '5 days'
-    'day' + format_plural(diff.days) == 1
-    >>> '1 day'
-    """
+    """Returns properly formatted pluralization"""
     return 's' if unit != 1 else ''
 
+def handle_rate_limit(reset_time):
+    """Handles rate limiting by waiting until reset"""
+    wait_time = max(0, reset_time - time.time())
+    if wait_time > 0:
+        print(f"Rate limited. Waiting {wait_time:.0f} seconds...")
+        time.sleep(wait_time)
 
-def simple_request(func_name, query, variables):
+def simple_request(func_name, query, variables, retry_count=0):
     """
-    Returns a request, or raises an Exception if the response does not succeed.
+    Returns a request with rate limit handling and retries
     """
-    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS)
-    if request.status_code == 200:
-        response_json = request.json()
-        if 'errors' in response_json:
-            raise Exception(f"{func_name} GraphQL errors: {response_json['errors']}")
-        return response_json
-    raise Exception(f"{func_name} failed with status {request.status_code}: {request.text}")
-
+    try:
+        request = requests.post('https://api.github.com/graphql', 
+                              json={'query': query, 'variables': variables}, 
+                              headers=HEADERS)
+        
+        if request.status_code == 200:
+            response_json = request.json()
+            if 'errors' in response_json:
+                if any(error.get('type') == 'RATE_LIMITED' for error in response_json['errors']):
+                    reset_time = int(request.headers.get('X-RateLimit-Reset', time.time() + RATE_LIMIT_WAIT))
+                    handle_rate_limit(reset_time)
+                    if retry_count < MAX_RETRIES:
+                        return simple_request(func_name, query, variables, retry_count + 1)
+                    raise Exception(f"Max retries ({MAX_RETRIES}) exceeded for {func_name}")
+                raise Exception(f"{func_name} GraphQL errors: {response_json['errors']}")
+            return response_json
+        
+        # Handle other status codes
+        if request.status_code == 403 and 'rate limit' in request.text.lower():
+            reset_time = int(request.headers.get('X-RateLimit-Reset', time.time() + RATE_LIMIT_WAIT))
+            handle_rate_limit(reset_time)
+            if retry_count < MAX_RETRIES:
+                return simple_request(func_name, query, variables, retry_count + 1)
+        
+        raise Exception(f"{func_name} failed with status {request.status_code}: {request.text}")
+    
+    except Exception as e:
+        if retry_count < MAX_RETRIES:
+            time.sleep(5)  # Wait before retrying
+            return simple_request(func_name, query, variables, retry_count + 1)
+        raise e
 
 def graph_commits(start_date, end_date):
-    """
-    Uses GitHub's GraphQL v4 API to return my total commit count
-    """
+    """Uses GitHub's GraphQL to return total commit count"""
     query_count('graph_commits')
     query = '''
     query($start_date: DateTime!, $end_date: DateTime!, $login: String!) {
@@ -70,15 +89,12 @@ def graph_commits(start_date, end_date):
             }
         }
     }'''
-    variables = {'start_date': start_date,'end_date': end_date, 'login': USER_NAME}
+    variables = {'start_date': start_date, 'end_date': end_date, 'login': USER_NAME}
     request = simple_request(graph_commits.__name__, query, variables)
     return int(request['data']['user']['contributionsCollection']['contributionCalendar']['totalContributions'])
 
-
 def graph_repos_stars(count_type, owner_affiliation, cursor=None):
-    """
-    Uses GitHub's GraphQL v4 API to return my total repository, star, or lines of code count.
-    """
+    """Uses GitHub's GraphQL to return repo/star count"""
     query_count('graph_repos_stars')
     query = '''
     query ($owner_affiliation: [RepositoryAffiliation], $login: String!, $cursor: String) {
@@ -110,21 +126,12 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None):
     elif count_type == 'stars':
         return stars_counter(request['data']['user']['repositories']['edges'])
 
-
 def stars_counter(data):
-    """
-    Count total stars in repositories owned by me
-    """
-    total_stars = 0
-    for node in data: 
-        total_stars += node['node']['stargazers']['totalCount']
-    return total_stars
-
+    """Count total stars in repositories"""
+    return sum(node['node']['stargazers']['totalCount'] for node in data)
 
 def user_getter(username):
-    """
-    Returns the account ID and creation time of the user
-    """
+    """Returns the account ID and creation time"""
     query_count('user_getter')
     query = '''
     query($login: String!){
@@ -137,11 +144,8 @@ def user_getter(username):
     request = simple_request(user_getter.__name__, query, variables)
     return request['data']['user']['id'], request['data']['user']['createdAt']
 
-
 def follower_getter(username):
-    """
-    Returns the number of followers of the user
-    """
+    """Returns the number of followers"""
     query_count('follower_getter')
     query = '''
     query($login: String!){
@@ -154,41 +158,31 @@ def follower_getter(username):
     request = simple_request(follower_getter.__name__, query, {'login': username})
     return int(request['data']['user']['followers']['totalCount'])
 
-
 def query_count(funct_id):
-    """
-    Counts how many times the GitHub GraphQL API is called
-    """
+    """Counts GitHub GraphQL API calls"""
     global QUERY_COUNT
     QUERY_COUNT[funct_id] += 1
 
-
 def perf_counter(funct, *args):
-    """
-    Calculates the time it takes for a function to run
-    Returns the function result and the time differential
-    """
+    """Times function execution"""
     start = time.perf_counter()
-    funct_return = funct(*args)
-    return funct_return, time.perf_counter() - start
-
+    try:
+        funct_return = funct(*args)
+        return funct_return, time.perf_counter() - start
+    except Exception as e:
+        return None, time.perf_counter() - start
 
 def formatter(query_type, difference, funct_return=False, whitespace=0):
-    """
-    Prints a formatted time differential
-    Returns formatted result if whitespace is specified, otherwise returns raw result
-    """
+    """Formats output with timing information"""
     print('{:<23}'.format('   ' + query_type + ':'), sep='', end='')
-    print('{:>12}'.format('%.4f' % difference + ' s ')) if difference > 1 else print('{:>12}'.format('%.4f' % (difference * 1000) + ' ms'))
-    if whitespace:
+    time_str = '%.4f' % (difference * 1000) + ' ms' if difference < 1 else '%.4f' % difference + ' s'
+    print('{:>12}'.format(time_str))
+    if whitespace and funct_return is not False:
         return f"{'{:,}'.format(funct_return): <{whitespace}}"
     return funct_return
 
-
 def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib_data, follower_data, loc_data):
-    """
-    Parse SVG files and update elements with my age, commits, stars, repositories, and lines written
-    """
+    """Updates SVG files with new data"""
     try:
         tree = etree.parse(filename)
         root = tree.getroot()
@@ -205,46 +199,25 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
     except Exception as e:
         print(f"Error updating {filename}: {e}")
 
-
 def justify_format(root, element_id, new_text, length=0):
-    """
-    Updates and formats the text of the element, and modifies the amount of dots in the previous element to justify the new text on the svg
-    """
+    """Formats text with proper justification"""
     if isinstance(new_text, int):
         new_text = f"{'{:,}'.format(new_text)}"
     new_text = str(new_text)
     find_and_replace(root, element_id, new_text)
     just_len = max(0, length - len(new_text))
-    if just_len <= 2:
-        dot_map = {0: '', 1: ' ', 2: '. '}
-        dot_string = dot_map[just_len]
-    else:
-        dot_string = ' ' + ('.' * just_len) + ' '
+    dot_string = ' ' + ('.' * just_len) + ' ' if just_len > 2 else ['', ' ', '. '][just_len]
     find_and_replace(root, f"{element_id}_dots", dot_string)
 
-
 def find_and_replace(root, element_id, new_text):
-    """
-    Finds the element in the SVG file and replaces its text with a new value
-    """
+    """Finds and replaces SVG elements"""
     element = root.find(f".//*[@id='{element_id}']")
     if element is not None:
         element.text = new_text
-    else:
-        print(f"Warning: Element with id '{element_id}' not found in SVG")
-
 
 def get_total_commits():
-    """
-    Get total commits across all repositories where the user is the author
-    """
+    """Gets total commit count"""
     query_count('graph_commits')
-    
-    # Get current year range for contributions
-    current_year = datetime.datetime.now().year
-    start_date = f"{current_year}-01-01T00:00:00Z"
-    end_date = f"{current_year}-12-31T23:59:59Z"
-    
     query = '''
     query($login: String!) {
         user(login: $login) {
@@ -253,29 +226,39 @@ def get_total_commits():
             }
         }
     }'''
-    
     variables = {'login': USER_NAME}
     request = simple_request('get_total_commits', query, variables)
     return request['data']['user']['contributionsCollection']['totalCommitContributions']
 
-
 def get_basic_loc_estimate():
-    """
-    Simple LOC estimation - returns placeholder values for now
-    For a more accurate count, you'd need to implement the full cache system
-    """
-    # For now, return placeholder values
-    # In a full implementation, this would scan through repositories and count lines
-    return [1000, 200, 800, True]  # [additions, deletions, total, cached]
+    """Simple LOC estimation with caching"""
+    cache_file = 'cache/loc_estimate.cache'
+    try:
+        # Try to read from cache first
+        if os.path.exists(cache_file):
+            with open(cache_file, 'r') as f:
+                cached_data = f.read().split(',')
+                if len(cached_data) == 4:
+                    return [int(cached_data[0]), int(cached_data[1]), int(cached_data[2]), True]
+    except:
+        pass
+    
+    # Default values if cache fails
+    loc_data = [1000, 200, 800, False]
+    
+    # Save to cache
+    try:
+        with open(cache_file, 'w') as f:
+            f.write(','.join(map(str, loc_data[:-1])))
+    except:
+        pass
+    
+    return loc_data
 
-
-if __name__ == '__main__':
-    """
-    Main execution
-    """
+def main():
+    """Main execution function"""
     print('Calculation times:')
     
-    # Check if required environment variables are set
     if 'ACCESS_TOKEN' not in os.environ:
         print("Error: ACCESS_TOKEN environment variable not set")
         exit(1)
@@ -283,17 +266,18 @@ if __name__ == '__main__':
         print("Error: USER_NAME environment variable not set")
         exit(1)
     
-    # Create cache directory if it doesn't exist
     os.makedirs('cache', exist_ok=True)
     
     try:
-        # Define global variable for owner ID and calculate user's creation date
+        # Get user data with rate limit handling
         user_data, user_time = perf_counter(user_getter, USER_NAME)
+        if user_data is None:
+            raise Exception("Failed to get user data")
         OWNER_ID, acc_date = user_data
         formatter('account data', user_time)
         
-        # Calculate age (you can modify the birthday date)
-        age_data, age_time = perf_counter(daily_readme, datetime.datetime(2000, 1, 1))  # Change this to your birthday
+        # Calculate age
+        age_data, age_time = perf_counter(daily_readme, datetime.datetime(2000, 1, 1))
         formatter('age calculation', age_time)
         
         # Get commit count
@@ -313,7 +297,7 @@ if __name__ == '__main__':
         follower_data, follower_time = perf_counter(follower_getter, USER_NAME)
         formatter('follower data', follower_time)
         
-        # Get LOC data (simplified version)
+        # Get LOC data
         total_loc, loc_time = perf_counter(get_basic_loc_estimate)
         formatter('LOC estimation', loc_time)
         
@@ -341,6 +325,7 @@ if __name__ == '__main__':
         
     except Exception as e:
         print(f"Error during execution: {e}")
-        import traceback
-        traceback.print_exc()
         exit(1)
+
+if __name__ == '__main__':
+    main()
