@@ -1,11 +1,10 @@
 name: README build
-
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   schedule:
-    - cron: "0 4 * * *" # 04:00 UTC daily
-
+    - cron: "0 4 * * *" # Fixed cron syntax - runs daily at 4:00 AM UTC
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,33 +13,28 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Cache pip
+      - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/cache/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: ${{ runner.os }}-pip-
-
       - name: Install dependencies
-        run: python -m pip install -r cache/requirements.txt
-
+        run: python -m pip install -r requirements.txt
       - name: Update README assets
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           USER_NAME: ${{ secrets.USER_NAME }}
         run: python today.py
-
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
           git add -A
-          git diff --quiet && echo "No changes to commit" && exit 0
+          git diff --quiet && git diff --staged --quiet && echo "No changes to commit" && exit 0
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git config user.name  "github-actions[bot]"
-          git commit -m "Updated README"
+          git config user.name "github-actions[bot]"
+          git commit -m "Updated README with latest GitHub stats"
           git push
