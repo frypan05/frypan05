@@ -112,7 +112,7 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None):
         # helper to return edges list (used by loc_query if needed)
         return edges_accum
 
-def # UNUSED_PLACEHOLDER(): pass
+#def # UNUSED_PLACEHOLDER(): pass
     # keep file consistent if some external code expects it - no-op
     # (Left intentionally blank)
 
