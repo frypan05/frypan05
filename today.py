@@ -277,7 +277,7 @@ def main():
         formatter('account data', user_time)
         
         # Calculate age
-        age_data, age_time = perf_counter(daily_readme, datetime.datetime(2000, 1, 1))
+        age_data, age_time = perf_counter(daily_readme, datetime.datetime(2004, 8, 5))
         formatter('age calculation', age_time)
         
         # Get commit count
