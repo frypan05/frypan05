@@ -244,7 +244,7 @@ def get_basic_loc_estimate():
         pass
     
     # Default values if cache fails
-    loc_data = [1000, 200, 800, False]
+    loc_data = [781029, 2190, 78504, False]
     
     # Save to cache
     try:
