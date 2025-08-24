@@ -5,3 +5,4 @@
   </picture>
 </a>
  
+![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=frypan05&theme=tokyo-night&hide_border=true)
