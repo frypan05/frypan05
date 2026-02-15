@@ -46,7 +46,7 @@ text, tspan {white-space: pre;}
 <text x="390" y="30" fill="#c9d1d9">
 <tspan x="390" y="30">daksh@sharma</tspan> -———————————————————————————————————————————-—-
 <tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">Windows 11 Pro, Linux, MacOS</tspan>
-<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots">. </tspan><tspan class="value" id="age_data">21 years, 6 months9</tspan>
+<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> </tspan><tspan class="value" id="age_data">21 years, 6 months10</tspan>
 <tspan x="390" y="90" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> .............. </tspan><tspan class="value">ASUS Technologies</tspan>
 <tspan x="390" y="110" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">CAM (Computer Aided Manufacturing) Operator</tspan>
 <tspan x="390" y="130" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">IDEA 2023.3.2, VSCode 1.96.0, ViM</tspan>
