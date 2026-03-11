@@ -7,3 +7,9 @@
 </a>
  
 ![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=frypan05&theme=tokyo-night&hide_border=true)
+
+### Employer?
+> [!IMPORTANT]  
+> <a href="https://dakshsharma.tech/resume.pdf">Checkout my resume</a>
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=D9BED1&height=120&section=footer" alt="footer"/>
