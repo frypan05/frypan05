@@ -23,9 +23,9 @@ MAX_RETRIES = 3
 def daily_readme(birthday):
     """Returns the length of time since I was born"""
     diff = relativedelta.relativedelta(datetime.datetime.today(), birthday)
-    return '{} {}, {} {}{}'.format(
-        diff.years, 'year' + format_plural(diff.years), 
-        diff.months, 'month' + format_plural(diff.months), 
+    return '{} {}, {} {}, {} {}{}'.format(
+        diff.years, 'year' + format_plural(diff.years),
+        diff.months, 'month' + format_plural(diff.months),
         diff.days, 'day' + format_plural(diff.days),
         ' 🎂' if (diff.months == 0 and diff.days == 0) else '')
 
