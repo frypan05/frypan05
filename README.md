@@ -18,13 +18,14 @@ My work sits at the intersection of **microservices Architecture, Automated infr
 If you're a Non-Tech, I make systems ultra fast and make sure you don't see the 'Oops! there's an issue with our site, come back later.' when you're surfing the internet.
 
 ---
-
+![social-network-banner (1)](https://github.com/user-attachments/assets/48923112-da18-4f98-9db0-78bd75f6b956)
 ## Employer? Recruiter? Talent Acquisition? HR? 🙏
 > [!IMPORTANT]  
 > https://dakshsharma.tech/resume.pdf
 
 #### ***(PS. I'm hired if you don't get a reply within 24hrs.)***
 ---
+
 
 ![My github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=frypan05&theme=vesper&hide_border=true)
 
