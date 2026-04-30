@@ -19,6 +19,13 @@ If you're a Non-Tech, I make systems ultra fast and make sure you don't see the 
 
 ---
 ![social-network-banner (1)](https://github.com/user-attachments/assets/48923112-da18-4f98-9db0-78bd75f6b956)
+
+## Live Links:
+- [**GitHub Trending**](https://ghtrend.vercel.app) — GitHub shows you 5–6 trending repos on a good day. this shows you today's, yesterday's and this whole week's at a single place.
+- [**VOLT**](https://voltui.vercel.app) — Blazingly fast API Testing Tool TUI.
+- [**Cloud Infrastructure Guidebook**](https://infra-op.vercel.app) — Event-driven architecture built for real-time data processing.
+- [**Collaborative Music Player**](https://fiesty.vercel.app) — This lets to listen to music, create mixtapes, collaboratively with your loved ones! It's purely real-time :D. 
+
 ## Employer? Recruiter? Talent Acquisition? HR? 🙏
 > [!IMPORTANT]  
 > https://dakshsharma.tech/resume.pdf
