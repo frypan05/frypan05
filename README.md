@@ -12,7 +12,7 @@
 ## Daksh Sharma
 **Software Engineer | Cloud Infrastructure**
 
-I design and build **high-performance backend systems** focused on scalability, real-time data processing, and developer-centric tooling.  
+I design and build **high-performance backend systems** focused on scalability and developer-centric tooling.  
 My work sits at the intersection of **microservices Architecture, Automated infrastructure, and Low Latency - High Throughput Engineering**.
 
 If you're a Non-Tech, I make systems ultra fast and make sure you don't see the 'Oops! there's an issue with our site, come back later.' when you're surfing the internet.
