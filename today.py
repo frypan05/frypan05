@@ -5,11 +5,15 @@ import os
 from lxml import etree
 import time
 import hashlib
+import traceback
 
 # Fine-grained personal access token with All Repositories access:
 # Account permissions: read:Followers, read:Starring, read:Watching
 # Repository permissions: read:Commit statuses, read:Contents, read:Issues, read:Metadata, read:Pull Requests
-HEADERS = {'authorization': 'token ' + os.environ['ACCESS_TOKEN']}
+HEADERS = {
+    "Authorization": f"Bearer {os.environ['ACCESS_TOKEN']}",
+    "Accept": "application/vnd.github+json"
+}
 USER_NAME = os.environ['USER_NAME']  # Your GitHub username
 QUERY_COUNT = {'user_getter': 0, 'follower_getter': 0, 'graph_repos_stars': 0, 'recursive_loc': 0, 'graph_commits': 0, 'loc_query': 0}
 
@@ -41,40 +45,37 @@ def handle_rate_limit(reset_time):
         time.sleep(wait_time)
 
 def simple_request(func_name, query, variables, retry_count=0):
-    """
-    Returns a request with rate limit handling and retries
-    """
     try:
-        request = requests.post('https://api.github.com/graphql', 
-                              json={'query': query, 'variables': variables}, 
-                              headers=HEADERS)
-        
-        if request.status_code == 200:
-            response_json = request.json()
-            if 'errors' in response_json:
-                if any(error.get('type') == 'RATE_LIMITED' for error in response_json['errors']):
-                    reset_time = int(request.headers.get('X-RateLimit-Reset', time.time() + RATE_LIMIT_WAIT))
-                    handle_rate_limit(reset_time)
-                    if retry_count < MAX_RETRIES:
-                        return simple_request(func_name, query, variables, retry_count + 1)
-                    raise Exception(f"Max retries ({MAX_RETRIES}) exceeded for {func_name}")
-                raise Exception(f"{func_name} GraphQL errors: {response_json['errors']}")
-            return response_json
-        
-        # Handle other status codes
-        if request.status_code == 403 and 'rate limit' in request.text.lower():
-            reset_time = int(request.headers.get('X-RateLimit-Reset', time.time() + RATE_LIMIT_WAIT))
-            handle_rate_limit(reset_time)
-            if retry_count < MAX_RETRIES:
-                return simple_request(func_name, query, variables, retry_count + 1)
-        
-        raise Exception(f"{func_name} failed with status {request.status_code}: {request.text}")
-    
-    except Exception as e:
+        response = requests.post(
+            "https://api.github.com/graphql",
+            json={
+                "query": query,
+                "variables": variables
+            },
+            headers=HEADERS,
+            timeout=30,
+        )
+
+        response.raise_for_status()
+
+        data = response.json()
+
+        if "errors" in data:
+            raise RuntimeError(data["errors"])
+
+        return data
+
+    except requests.exceptions.RequestException as e:
         if retry_count < MAX_RETRIES:
-            time.sleep(5)  # Wait before retrying
-            return simple_request(func_name, query, variables, retry_count + 1)
-        raise e
+            print(f"Retry {retry_count+1}/{MAX_RETRIES}")
+            time.sleep(5)
+            return simple_request(
+                func_name,
+                query,
+                variables,
+                retry_count + 1
+            )
+        raise
 
 def graph_commits(start_date, end_date):
     """Uses GitHub's GraphQL to return total commit count"""
@@ -324,9 +325,9 @@ def main():
         print(f'   Repos (contributed): {contrib_data:,}')
         print(f'   Followers: {follower_data:,}')
         
-    except Exception as e:
-        print(f"Error during execution: {e}")
-        exit(1)
+    except Exception:
+        traceback.print_exc()
+    raise
 
 if __name__ == '__main__':
     main()
