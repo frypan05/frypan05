@@ -4,7 +4,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 4 * * *" # Fixed cron syntax - runs daily at 4:00 AM UTC
+    - cron: "0 4 */2 * *" # Fixed cron syntax - runs daily at 4:00 AM UTC
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,8 +35,11 @@ jobs:
       - name: Commit and push changes
         run: |
           git add -A
-          git diff --quiet && git diff --staged --quiet && echo "No changes to commit" && exit 0
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
           git commit -m "Updated README with latest GitHub stats"
-          git push
+          git push origin HEAD:main
