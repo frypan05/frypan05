@@ -9,7 +9,7 @@
 
 ---
 
-## Daksh Sharma
+## Daksh Sharma | [*Product Space*](https://products-daksh.vercel.app/)
 **Software Engineer | Cloud Infrastructure**
 
 I design and build **high-performance backend systems** focused on scalability and developer-centric tooling.  
@@ -20,9 +20,8 @@ If you're a Non-Tech, I make systems ultra fast and make sure you don't see the 
 ---
 ![social-network-banner (1)](https://github.com/user-attachments/assets/48923112-da18-4f98-9db0-78bd75f6b956)
 
-## Product Space:
+## Toasts:
 [![Zed download chart](https://zedbadge.dev/chart/lumin-theme.svg?category=1)](https://zed.dev/extensions/lumin-theme) [![Zed download chart](https://zedbadge.dev/chart/github-actions-snippets.svg?category=1)](https://zed.dev/extensions/github-actions-snippets)
-- [**Digital Garden**](https://products-daksh.vercel.app/)
 
 ## Employer? Recruiter? Talent Acquisition? HR? 🙏
 > [!IMPORTANT]  
