@@ -12,10 +12,10 @@
 ## Daksh Sharma | [*Product Space*](https://products-daksh.vercel.app/)
 **Software Engineer | Cloud Infrastructure**
 
-I design and build **high-performance backend systems** focused on scalability and developer-centric tooling.  
+I design and build **high-performance backend systems** focused on scalability and developer-centric tooling I wish existed.  
 My work sits at the intersection of **microservices Architecture, Automated infrastructure, and Low Latency - High Throughput Engineering**.
 
-If you're a Non-Tech, I make systems ultra fast and make sure you don't see the 'Oops! there's an issue with our site, come back later.' when you're surfing the internet.
+If you're a Non-Tech, I make systems ultra fast and make sure you don't see the 'Oops! there's an issue with our services, come back later.' when you're surfing the internet.
 
 ---
 ![social-network-banner (1)](https://github.com/user-attachments/assets/48923112-da18-4f98-9db0-78bd75f6b956)
@@ -23,12 +23,5 @@ If you're a Non-Tech, I make systems ultra fast and make sure you don't see the 
 ## Toasts:
 [![Zed download chart](https://zedbadge.dev/chart/lumin-theme.svg?category=1)](https://zed.dev/extensions/lumin-theme) [![Zed download chart](https://zedbadge.dev/chart/github-actions-snippets.svg?category=1)](https://zed.dev/extensions/github-actions-snippets)
 
-## Employer? Recruiter? Talent Acquisition? HR? 🙏
-> [!IMPORTANT]  
-> https://dakshsharma.tech/resume.pdf
 
-#### ***(PS. I'm hired if you don't get a reply within 24hrs.)***
----
-
-![GitHub Stats](https://ghstats.dev/api/card?username=frypan05&theme=nord)
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=40E0D0&height=140&section=footer" alt="footer"/>
